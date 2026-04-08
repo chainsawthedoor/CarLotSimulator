@@ -19,6 +19,7 @@ namespace CarLotSimulator
             var carLotOne = new CarLot();
 
             var carOne = new Car();
+            
             carOne.Make = "Chrysler";
             carOne.Model = "Thunderbolt Roadster";
             carOne.Year = 1941;
@@ -28,6 +29,7 @@ namespace CarLotSimulator
             carOne.MakeHonkNoise("Hee-Honk!");
             
             carLotOne.ParkingLot.Add(carOne);
+            Console.WriteLine($"The number of cars in the lot is now: {CarLot.numberOfCars}");
             
             var carTwo = new Car() 
             {
@@ -42,12 +44,14 @@ namespace CarLotSimulator
             carTwo.MakeHonkNoise("Beep!");
             
             carLotOne.ParkingLot.Add(carTwo);
+            Console.WriteLine($"The number of cars in the lot is now: {CarLot.numberOfCars}");
 
             var carThree = new Car("Studebaker", "Champion", 1948, true);
             carThree.MakeEngineNoise("Roar!");
             carThree.MakeHonkNoise("Beep Beep!");
             
             carLotOne.ParkingLot.Add(carThree);
+            Console.WriteLine($"The number of cars in the lot is now: {CarLot.numberOfCars}");
             
 
             //*************BONUS X 2*************//
@@ -56,7 +60,10 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            
             carLotOne.CheckCars();
+            
+            Console.WriteLine($"The FINAL number of cars in the lot is now: {CarLot.numberOfCars}");
         }
     }
 }
